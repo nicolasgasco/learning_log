@@ -4,10 +4,10 @@
 
   <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
 
-  <p>Add a new entry:</p>
+  <p>Edit entry:</p>
   <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
   	{% csrf_token %}
   	{{ form.as_p }}
-  	<button name='submit'>Add entry</button>
+  	<button name='submit'>Save changes</button>
   </form>
 {% endblock content %}
